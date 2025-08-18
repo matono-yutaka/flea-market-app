@@ -1,0 +1,85 @@
+.header {
+    background-color: black;
+    padding: 22px 22px;
+    height: 80px;
+}
+
+.img-content {
+    width: 370px;
+}
+
+.register-form__heading {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 80px;
+}
+
+.register-form {
+    background-color: #ffffff;
+}
+
+.register-form__inner {
+    display: flex;
+    justify-content: center;
+    margin-top: -40px;
+}
+
+.register-form__form {
+    padding: 64px 96px;
+    width: 40vw;
+    background-color: #FDFEFE;
+}
+
+@media (min-width: 1400px) and (max-width: 1540px) {
+    .register-form__form {
+    width: 58vw;
+    }
+}
+
+.register-form__group {
+    margin-bottom: 32px;
+}
+
+.register-form__label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.register-form__input {
+    display: block;
+    padding: 8px 16px;
+    width: 100%;
+    height: 58px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 25px;
+}
+
+.register-form__error-message {
+    color: #FF9494;
+}
+
+.register-form__btn {
+    margin: 60px auto 24px;
+    width: 100%;
+    background-color: #fc5e5e;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    height: 64px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login__button-submit{
+    text-decoration: none;
+    color: rgb(47, 117, 207);
+    font-size: 20px;
+}
+
+.login__link {
+    text-align: center;
+}

@@ -1,0 +1,135 @@
+.purchase-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.left-contents {
+    flex: 0 0 55%;
+}
+
+.right-contents {
+    flex: 0 0 30%;
+}
+
+.image-box {
+    display: flex;
+}
+
+.item-image {
+    width: 180px;
+    height: auto;
+    object-fit: cover; /* ← これが重要 */
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.image-text {
+    margin-left: 50px;
+}
+
+.item-name {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.price {
+    font-size: 30px;
+}
+
+.price-logo {
+    font-size: 24px;
+}
+
+.divider {
+    height: 1px;
+    width: 90%;
+    background-color: black;
+    margin-top: 50px;
+}
+
+.payment-confirmation {
+    border: 1px solid black;
+}
+
+.upper {
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 115px;
+}
+
+.under {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 115px;
+}
+
+.purchase-form__btn {
+    margin: 60px auto 24px;
+    width: 100%;
+    background-color: #fc5e5e;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.payment,
+.shipping-address {
+    margin-left: 30px;
+}
+
+.select {
+    margin-left: 70px;
+    font-size: 16px;
+    padding: 4px;
+    border-radius: 4px;
+    width: 265px;
+    height: 31px;
+}
+
+.address-contents {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.change-address {
+    margin-right: 100px;
+    text-decoration: none;
+    color: rgb(0, 153, 255);
+    font-size: 20px;
+}
+
+.item-price,
+.payment2,
+.payment-logo {
+    font-size: 20px;
+}
+
+.payment-select,
+.payment-amount {
+    font-size: 24px;
+}
+
+.address {
+    margin-left: 70px;
+}
+
+.payment-select {
+    width: 190px; /* ← 固定幅を追加 */
+    text-align: center; /* ← 中央揃えで安定させる */
+}
+
+.warning-message {
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}

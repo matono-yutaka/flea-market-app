@@ -1,0 +1,75 @@
+.top-list {
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+    gap: 80px;
+    align-items: baseline;
+    margin-top: 30px;
+    margin-left: 200px;
+}
+
+.recommend {
+    color: red;
+    margin-bottom: 4px;
+}
+
+.my-list {
+    color: rgb(107, 107, 107);
+    text-decoration: none;
+}
+
+.divider {
+    background-color: rgb(96, 96, 96);
+    height: 2px;
+    margin-bottom: 32px;
+}
+
+@media (min-width: 1400px) and (max-width: 1540px) {
+
+}
+
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.item-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    padding-bottom: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-info {
+    text-align: left;
+    color: black;
+    font-size: 23px;
+    display: flex;
+    justify-content: space-between;}
+
+.item-card-link {
+    text-decoration: none;
+}
+
+.card-name {
+    margin-top: 5px;
+}
+
+.sold {
+    color: red;
+    font-size: 42px;
+    font-weight: bold;
+}

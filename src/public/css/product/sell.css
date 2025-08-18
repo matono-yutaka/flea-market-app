@@ -1,0 +1,196 @@
+.sell-form__heading {
+    text-align: center;
+    font-size: 36px;
+    margin: 45px 0 0;
+}
+
+.sell-form {
+    background-color: #ffffff;
+}
+
+.sell-form__inner {
+    display: flex;
+    justify-content: center;
+}
+
+.sell-form__form {
+    padding: 20px 96px;
+    width: 40vw;
+    background-color: #FDFEFE;
+}
+
+@media (min-width: 1400px) and (max-width: 1540px) {
+    .sell-form__form,
+    .product-description,
+    .sell-image {
+    width: 59vw;
+    }
+}
+
+.sell-form__group {
+    margin-bottom: 32px;
+}
+
+.sell-form__label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.sell-form__input {
+    display: block;
+    padding: 8px 16px;
+    width: 100%;
+    height: 48px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.product-description {
+    display: block;
+    padding: 8px 12px;
+    width: 100%;
+    height: 120px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.sell-form__error-message {
+    color: #FF9494;
+}
+
+.sell-form__btn {
+    margin: 60px auto 24px;
+    width: 100%;
+    background-color: #fc5e5e;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    height: 64px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.image-box {
+    width: 100%;
+    aspect-ratio: 4 / 1;
+    border: 1px dashed #aaa;
+    border-radius: 4px;
+    position: relative;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+}
+
+.file-label {
+    width: 165px;
+    height: 43px;
+    color: rgb(255, 84, 84);
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    border: 2px solid rgb(255, 87, 31);
+    font-weight: bold;
+    margin-left: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%, -50%);
+    cursor: pointer;
+    text-align: center;
+    align-content: center;
+}
+
+.image-box.has-image .file-label {
+    bottom: 10px;
+    right: 10px;
+    top: auto;
+    left: auto;
+    transform: none;
+    background-color: #fff;
+    color: rgb(246, 86, 86);
+    border: 2px solid rgb(240, 86, 86);
+}
+
+.product-image_text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.product-detail {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(117, 117, 117);
+    margin-bottom: 4px;
+}
+
+.divider {
+    background-color: rgb(96, 96, 96);
+    height: 1px;
+    margin-bottom: 32px;
+}
+
+.category {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-status {
+    font-size: 23px;
+    font-weight: bold;
+    margin: 50px 0 14px;
+}
+
+.select {
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(126, 126, 126);
+    border-radius: 4px;
+    padding-left: 10px;
+    margin-bottom: 40px;
+}
+
+.checkbox {
+    display: none;
+}
+
+  /* ラベル（ボタン風） */
+.category-label {
+    display: inline-block;
+    border: 2px solid #ff5f5f;
+    color: #ff5f5f;
+    border-radius: 9999px; /* pill型 */
+    padding: 4px 16px;
+    margin: 14px 0 16px 14px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+  /* チェック時のスタイル */
+.checkbox:checked + .category-label {
+    background-color: #ff5f5f;
+    color: #fff;
+}
+
+  /* 実際の file input は非表示 */
+.image-select__btn {
+    display: none;
+}
+
+.sell-form__error-message2 {
+    color: #FF9494;
+    margin-top: 0;
+    padding-top: 0;
+
+}

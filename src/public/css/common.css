@@ -1,0 +1,81 @@
+*, *::before, *::after {
+    box-sizing: border-box
+}
+
+.header {
+    background-color: black;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    height: 80px;
+}
+
+.img-content {
+    width: 26%;
+}
+
+.app__link {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header__text {
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+    font-size: 24px;
+    padding-left: 45px;
+
+}
+
+.header__btn {
+    color: white;
+    background-color: black;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.mypage__btn {
+    color: white;
+    background-color: black;
+    font-size: 24px;
+    border: none;
+    text-decoration: none;
+    width: 120px;
+}
+
+.sell__btn {
+    background-color: white;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 8px 24px 0 24px;
+    height: 50px;
+    width: 100px;
+}
+
+@media (min-width: 1400px) and (max-width: 1540px) {
+    .header__text {
+        width: 500px;
+    }
+}
+
+.alert {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.alert-danger {
+    background: #f8d7da;
+    color: #721c24;
+}
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+}

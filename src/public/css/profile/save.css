@@ -1,0 +1,106 @@
+.profile-form__heading {
+    text-align: center;
+    font-size: 36px;
+    margin: 55px 0 0;
+}
+
+.profile-form {
+    background-color: #ffffff;
+}
+
+.profile-form__inner {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-form__form {
+    padding: 50px 96px;
+    width: 40vw;
+    background-color: #FDFEFE;
+}
+
+@media (min-width: 1400px) and (max-width: 1540px) {
+    .profile-form__form {
+    width: 58vw;
+    }
+}
+
+.profile-form__group {
+    margin-bottom: 32px;
+}
+
+.profile-form__label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.profile-form__input {
+    display: block;
+    padding: 8px 16px;
+    width: 100%;
+    height: 53px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #7a7a7a;
+}
+
+.profile-form__error-message {
+    color: #FF9494;
+}
+
+.profile-form__btn {
+    margin: 60px auto 24px;
+    width: 100%;
+    background-color: #fc5e5e;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    height: 64px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.image-box {
+    display: flex;
+    align-items: center;
+    margin: 0 0 70px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* ← これが重要 */
+    background-color: #d5d5d5;
+    border-radius: 50%;
+    border: 1px solid rgb(183, 183, 183);
+}
+
+.image-select__btn {
+    display: none;
+}
+
+.file-label {
+    width: 179px;
+    height: 49px;
+    color: rgb(255, 98, 98);
+    border-radius: 10px;
+    background-color: white;
+    font-size: 20px;
+    border: 2px solid rgb(255, 67, 67);
+    font-weight: bold;
+    margin-left: 40px;
+    cursor: pointer;
+    text-align: center;
+    align-content: center;
+    padding: 12px 14px;
+}
+
+.image-text {
+    display: block;
+}
+

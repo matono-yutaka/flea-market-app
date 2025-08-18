@@ -1,0 +1,119 @@
+.upper-contents {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 70px;
+}
+
+.image-box {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    background-color: #d5d5d5;
+    border-radius: 100px;
+    margin: 0 100px;
+    object-fit: cover; /* ← これが重要 */
+    border: 1px solid rgb(194, 194, 194);
+}
+
+.user-name {
+    font-size: 36px;
+}
+
+.edit-link {
+    width: 310px;
+    height: 59px;
+    border: 2px solid red;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 24px;
+    align-items: center;
+    color: red;
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 40px;
+}
+
+
+.top-list {
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+    gap: 80px;
+    align-items: baseline;
+    margin-top: 50px;
+    margin-left: 140px;
+
+}
+
+.exhibit-list {
+    color: red;
+    margin-bottom: 4px;
+}
+
+.purchase-list {
+    color: rgb(107, 107, 107);
+    text-decoration: none;
+}
+
+.divider {
+    background-color: rgb(96, 96, 96);
+    height: 2px;
+    margin-bottom: 32px;
+}
+
+@media (min-width: 1400px) and (max-width: 1540px) {
+
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    padding-bottom: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-info {
+    text-align: left;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-card-link {
+    text-decoration: none;
+}
+
+.card-name {
+    margin-top: 5px;
+    font-size: 23px;
+}
+
+.sold {
+    color: red;
+    font-size: 42px;
+    font-weight: bold;
+}
+

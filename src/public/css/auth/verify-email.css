@@ -1,0 +1,57 @@
+.header {
+    background-color: black;
+    padding: 22px 22px;
+    height: 80px;
+}
+
+.img-content {
+    width: 370px;
+}
+
+.verify-heading {
+    text-align: center;
+    margin: 200px 0 80px;
+}
+
+@media (min-width: 1400px) and (max-width: 1540px) {
+}
+
+.verify__link {
+    display: block;
+    justify-items: center;
+    text-align: center;
+
+}
+
+.verify-btn {
+    background-color: rgb(223, 223, 223);
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    border: 1px solid black;
+    text-decoration: none;
+    padding: 22px 33px;
+}
+
+.reverify-link {
+    text-decoration: none;
+    color: rgb(47, 117, 207);
+    font-size: 20px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    margin-top: 70px;
+}
+
+.alert {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+}
