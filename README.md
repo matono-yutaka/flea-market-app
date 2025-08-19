@@ -7,7 +7,9 @@
 **Dockerビルド**<br>
 1. git clone git@github.com:matono-yutaka/flea-market-app.git
 
-2. 以下のコマンドで Docker コンテナをビルド・起動
+2. cd flea-market-app
+
+3. 以下のコマンドで Docker コンテナをビルド・起動
 
 ```
 docker compose up -d --build
