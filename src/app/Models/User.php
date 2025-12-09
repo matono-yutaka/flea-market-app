@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use App\Models\UserProfile;
-use App\Models\Item;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -59,11 +57,18 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Comment::class);
     }
 
-    // いいねした商品の一覧
+    // いいねした商品の一覧を取得するリレーション定義
     public function goods()
     {
+        // User と Item は多対多の関係にある
+        // 中間テーブル（第2引数）として 'goods' テーブルを使用する
+        // withTimestamps() は中間テーブルの created_at / updated_at を自動で更新する設定
         return $this->belongsToMany(Item::class, 'goods')->withTimestamps();
     }
 
+    public function messages()
+    {
+        return $this->hasMany(Message::class);
+    }
 
 }

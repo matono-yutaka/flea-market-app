@@ -10,24 +10,31 @@ class ClearTempImageIfNotOnForm
 {
     public function handle(Request $request, Closure $next)
     {
-        $allowedRoutes = [
-            'exhibit.exhibit',
-            'save.profile',
-            'profile.edit',
+        $routeName = optional($request->route())->getName();
+
+        // 出品画像の allowed
+        $allowedItemRoutes = [
             'sell.sell',
-            'mypage',
-            'index'
+            'exhibit.exhibit',
         ];
 
-        $route = $request->route();
-        $routeName = $route ? $route->getName() : null;
+        // プロフィール画像の allowed
+        $allowedProfileRoutes = [
+            'profile.edit',
+            'save.profile',
+        ];
 
-        if (!$routeName || !in_array($routeName, $allowedRoutes)) {
+        // allowed以外のルートの場合、出品画像セッションを消去
+        if (!in_array($routeName, $allowedItemRoutes)) {
             Session::forget('temp_item_image_path');
-            Session::forget('temp_profile_image_path');
+        }
 
+        // allowed以外のルートの場合、プロフィール画像セッションを消去
+        if (!in_array($routeName, $allowedProfileRoutes)) {
+            Session::forget('temp_profile_image_path');
         }
 
         return $next($request);
     }
+
 }

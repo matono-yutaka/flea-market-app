@@ -57,7 +57,7 @@ class ItemsTableSeeder extends Seeder
                 'image' => 'https://coachtech-matter.s3.ap-northeast-1.amazonaws.com/image/Living+Room+Laptop.jpg',
                 'condition' => '良好',
             ],[
-                'user_id' => 1,
+                'user_id' => 2,
                 'name' => 'マイク',
                 'price' => '8000',
                 'brand_name' => 'なし',
@@ -65,7 +65,7 @@ class ItemsTableSeeder extends Seeder
                 'image' => 'https://coachtech-matter.s3.ap-northeast-1.amazonaws.com/image/Music+Mic+4632231.jpg',
                 'condition' => '目立った傷や汚れなし',
             ],[
-                'user_id' => 1,
+                'user_id' => 2,
                 'name' => 'ショルダーバッグ',
                 'price' => '3500',
                 'brand_name' => '',
@@ -73,7 +73,7 @@ class ItemsTableSeeder extends Seeder
                 'image' => 'https://coachtech-matter.s3.ap-northeast-1.amazonaws.com/image/Purse+fashion+pocket.jpg',
                 'condition' => 'やや傷や汚れあり',
             ],[
-                'user_id' => 1,
+                'user_id' => 2,
                 'name' => 'タンブラー',
                 'price' => '500',
                 'brand_name' => 'なし',
@@ -81,7 +81,7 @@ class ItemsTableSeeder extends Seeder
                 'image' => 'https://coachtech-matter.s3.ap-northeast-1.amazonaws.com/image/Tumbler+souvenir.jpg',
                 'condition' => '状態が悪い',
             ],[
-                'user_id' => 1,
+                'user_id' => 2,
                 'name' => 'コーヒーミル',
                 'price' => '4000',
                 'brand_name' => 'Starbacks',
@@ -89,7 +89,7 @@ class ItemsTableSeeder extends Seeder
                 'image' => 'https://coachtech-matter.s3.ap-northeast-1.amazonaws.com/image/Waitress+with+Coffee+Grinder.jpg',
                 'condition' => '良好',
             ],[
-                'user_id' => 1,
+                'user_id' => 2,
                 'name' => 'メイクセット',
                 'price' => '2500',
                 'brand_name' => '',

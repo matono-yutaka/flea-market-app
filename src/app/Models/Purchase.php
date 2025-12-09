@@ -9,7 +9,7 @@ class Purchase extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'item_id', 'shipping_address_id'];
+    protected $fillable = ['user_id', 'item_id', 'shipping_address_id', 'status'];
 
     public function user()
     {
@@ -24,5 +24,10 @@ class Purchase extends Model
     public function shippingAddress()
     {
         return $this->belongsTo(ShippingAddress::class);
+    }
+
+    public function messages()
+    {
+        return $this->hasMany(Message::class);
     }
 }

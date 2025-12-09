@@ -31,10 +31,11 @@ class UserProfileEditTest extends TestCase
 
         $response->assertStatus(200);
 
-        // フォームに初期値が含まれているか確認
-        $response->assertSee('テストユーザー', false);
-        $response->assertSee('123-4567', false);
-        $response->assertSee('東京都渋谷区テスト町1-2-3', false);
-        $response->assertSee('profile.jpg', false);
+        $response->assertSee('value="テストユーザー"', false);
+        $response->assertSee('value="123-4567"', false);
+        $response->assertSee('value="東京都渋谷区テスト町1-2-3"', false);
+        $response->assertSee(asset('storage/images/national_flag/profile.jpg'), false);
+
+        // フォームに初期値が含まれているか確認 $response->assertSee('テストユーザー', false); $response->assertSee('123-4567', false); $response->assertSee('東京都渋谷区テスト町1-2-3', false); $response->assertSee('profile.jpg', false);これを変更
     }
 }

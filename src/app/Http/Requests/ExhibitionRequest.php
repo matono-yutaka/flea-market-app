@@ -22,10 +22,14 @@ class ExhibitionRequest extends FormRequest
      * @return array
      */
 
+    // バリデーション前の処理、VD前にセッションにパスを入れないとVD後再表示されない(コントローラーはVD後の処理のためこれをコントローラーに書いても再表示されない)
     protected function prepareForValidation()
     {
+        // 新しく画像がアップロードされた場合
         if ($this->hasFile('image')) {
+            // 一時保存場所へのパス
             $tempPath = $this->file('image')->store('temp', 'public');
+            // バリデーションエラー後のプレビュー保持用にパスをセッションへ保存
             $this->session()->put('temp_item_image_path', $tempPath);
         }
     }
@@ -34,24 +38,10 @@ class ExhibitionRequest extends FormRequest
 {
     return [
         'image' => [
-            function ($attribute, $value, $fail) {
-                // アップロードファイルなし＆セッション or hidden の temp_item_image_path も空ならエラー
-                if (!$this->hasFile('image') && !$this->filled('temp_item_image_path')) {
-                    $fail('商品画像をアップロードしてください');
-                }
-            },
-            // ファイルがある場合のみmimesチェックを
-            function ($attribute, $value, $fail) {
-                if ($this->hasFile('image')) {
-                    $file = $this->file('image');
-                    $allowed = ['png', 'jpeg', 'jpg'];
-                    if (!in_array($file->extension(), $allowed)) {
-                        $fail('「.png」または「.jpeg」形式でアップロードしてください');
-                    }
-                }
-            },
+            'required_without:temp_item_image_path',
+            'mimes:png,jpg,jpeg',
         ],
-        // 他のバリデーションルール
+        'temp_item_image_path' => 'nullable',
         'name' => 'required',
         'description' => 'required|max:255',
         'categories' => 'required',
@@ -69,7 +59,7 @@ class ExhibitionRequest extends FormRequest
             'name.required' => '商品名を入力してください',
             'description.required' => '商品説明を入力してください',
             'description.max' => '255文字以内で入力してください',
-            'image.required' => '商品画像をアップロードしてください',
+            'image.required_without' => '商品画像をアップロードしてください',
             'image.mimes' => '「.png」または「.jpeg」形式でアップロードしてください',
             'categories.required' => '商品のカテゴリーを選択してください',
             'condition.required' => '商品の状態を選択してください',

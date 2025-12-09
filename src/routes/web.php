@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ChatController;
 use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
@@ -59,6 +60,17 @@ Route::middleware('auth')->group(function () {
     Route::get('/purchase/success/{itemId}', [PaymentController::class, 'handleSuccess'])->name('purchase.success');
 
     Route::post('/stripe/webhook', [StripeWebhookController::class, 'handleWebhook']);
+    // 以下プロテスト⬇︎
+    // 取引チャット画面
+    Route::get('/chat/{id}', [ChatController::class, 'chat'])->name('chat.chat');
+    // 取引チャット処理
+    Route::post('/chat/{id}/message', [ChatController::class, 'message']);
+    // 取引チャット編集処理
+    Route::post('/chat/{id}/edit', [ChatController::class, 'edit']);
+    // 取引チャット削除処理
+    Route::delete('/chat/{id}/delete', [ChatController::class, 'destroy']);
+    // modal
+    Route::post('/trade/complete/store/{id}', [ChatController::class, 'store']);
 });
 
 // メール認証を促す画面

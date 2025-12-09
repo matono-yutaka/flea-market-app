@@ -47,15 +47,20 @@
     align-items: baseline;
     margin-top: 50px;
     margin-left: 140px;
-
 }
 
 .exhibit-list {
     color: red;
     margin-bottom: 4px;
+    text-decoration: none;
 }
 
 .purchase-list {
+    color: rgb(107, 107, 107);
+    text-decoration: none;
+}
+
+.trading-list {
     color: rgb(107, 107, 107);
     text-decoration: none;
 }
@@ -117,3 +122,75 @@
     font-weight: bold;
 }
 
+.star-on {
+    color: gold;     /* 黄色 */
+    font-size: 40px;
+}
+
+.star-off {
+    color: #ccc;     /* 薄いグレー */
+    font-size: 40px;
+}
+
+.total-unread-badge {
+    background: red;
+    color: white;
+    border-radius: 40%;
+    font-size: 19px;
+    width: 27px;
+    height: 26px;
+    text-align: center;
+}
+
+.trading-messages {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-top: 0;
+}
+
+@media (min-width: 768px) and (max-width: 850px) {
+
+    /* 上部プロフィールエリア */
+    .upper-contents {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .profile-image {
+        margin: 0 auto;
+        width: 120px;
+        height: 120px;
+    }
+
+    .edit-link {
+        width: 250px;
+        font-size: 18px;
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    /* トップのタブ切り替え */
+    .top-list {
+        margin-left: 20px;
+        gap: 30px;
+        font-size: 20px;
+    }
+
+    .trading-messages {
+        gap: 6px;
+    }
+
+    /* 商品カード（タブレットは2列推奨） */
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding: 0 10px;
+    }
+
+    .card-name {
+        font-size: 18px;
+    }
+}

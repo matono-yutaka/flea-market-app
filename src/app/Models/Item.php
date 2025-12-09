@@ -18,6 +18,7 @@ class Item extends Model
         return $this->belongsTo(User::class);
     }
 
+    // コントローラーで使ってない、残念・・・
     public function scopeKeywordSearch($query, $keyword)
     {
         if (!empty($keyword)) {
@@ -35,9 +36,12 @@ class Item extends Model
         return $this->hasMany(Comment::class);
     }
 
-    // この商品をいいねしたユーザー一覧
+    // この商品をいいねしたユーザー一覧を取得するリレーション定義
     public function likedUsers()
     {
+        // Item（商品）と User（ユーザー）は多対多の関係にある
+        // 中間テーブル 'goods' を介して関連付ける
+        // withTimestamps() は中間テーブルの created_at / updated_at を自動的に管理
         return $this->belongsToMany(User::class, 'goods')->withTimestamps();
     }
 }

@@ -1,6 +1,6 @@
 # アプリケーション名
 
-模擬案件初級_フリマアプリ
+模擬案件初級_フリマアプリ->Pro入会テスト
 
 ## 環境構築
 
@@ -77,3 +77,17 @@ php artisan storage:link
 - MailHog： http://localhost:8025/
 - Stripe： https://dashboard.stripe.com/test/dashboard
 
+
+## ダミーデータ
+name: ユーザー1
+email: test1@example.com
+password: password1
+-------------------------
+name: ユーザー2
+email: test2@example.com
+password: password2
+-------------------------
+name: ユーザー3
+email: test3@example.com
+password: password3
+-------------------------

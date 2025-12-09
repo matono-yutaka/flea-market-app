@@ -39,12 +39,11 @@
       </div>
       <div class="comment-group2">
         <img src="/storage/images/message.svg" alt="コメントアイコン" class="comment-icon">
-        <p class="number">{{ $item->comments->count() }}</p>
+        <p class="number">{{ $comments->count() }}</p>
       </div>
     </div>
     @if(auth()->id() !== ($item->user_id))
     <form class="purchase-form" action="{{ url('/purchase/' . $item->id) }}" method="get">
-      @csrf
       <input class="purchase-btn" type="submit" value="購入手続きへ">
       @else
       <input class="purchase-btn_disabled" type="submit" value="購入手続きへ" disabled>

@@ -17,7 +17,7 @@ use Illuminate\Support\Str;
 <body>
   <div class="app">
     <header class="header">
-        <img src="{{ asset('storage/images/logo.svg') }}" alt="" class="img-content" />
+        <a href="/" class="img-content"><img src="{{ asset('storage/images/logo.svg') }}" alt=""></a>
 
         <form action="/" method="get">
         <input class="header__text" type="text"  placeholder="なにをお探しですか？" name="keyword" value="{{ request('keyword') }}">

@@ -39,3 +39,4 @@ class StripeWebhookController extends Controller
     }
 
 }
+//どうやらこのファイルは不要らしい...（本番ではおそらく必要）
