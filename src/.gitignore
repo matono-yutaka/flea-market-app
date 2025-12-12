@@ -16,6 +16,8 @@ yarn-error.log
 
 !src/storage/app
 !src/storage/app/public
-!src/storage/app/public/**
+!src/storage/app/public/images
+!src/storage/app/public/images/national_flag
 
-#どうやら「!」の列(gitに反映させるために必要)は18行目だけでもいいらしい
+/src/docker/mysql/data/
+# mysqlのデータは本来GitHubに反映してはいけないらしい
