@@ -13,7 +13,9 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-!storage/app
-!storage/app/public
-!storage/app/public/**
+
+!src/storage/app
+!src/storage/app/public
+!src/storage/app/public/**
+
 #どうやら「!」の列(gitに反映させるために必要)は18行目だけでもいいらしい

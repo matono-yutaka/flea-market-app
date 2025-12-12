@@ -66,9 +66,9 @@ Route::middleware('auth')->group(function () {
     // 取引チャット処理
     Route::post('/chat/{id}/message', [ChatController::class, 'message']);
     // 取引チャット編集処理
-    Route::post('/chat/{id}/edit', [ChatController::class, 'edit']);
+    Route::post('/chat/edit/{messageId}', [ChatController::class, 'edit']);
     // 取引チャット削除処理
-    Route::delete('/chat/{id}/delete', [ChatController::class, 'destroy']);
+    Route::delete('/chat/delete/{messageId}', [ChatController::class, 'destroy']);
     // modal
     Route::post('/trade/complete/store/{id}', [ChatController::class, 'store']);
 });

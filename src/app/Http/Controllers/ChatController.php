@@ -74,11 +74,9 @@ class ChatController extends Controller
 
 
     // 取引チャット編集処理
-    public function edit(Request $request, $id)
+    public function edit(Request $request, $messageId)
     {
-        Message::where('purchase_id', $id)
-        ->where('user_id', auth()->id())
-        ->latest()
+        Message::where('id', $messageId)
         ->first()
         ->update([
             'comment' => $request->comment
@@ -89,11 +87,9 @@ class ChatController extends Controller
 
 
     // 取引チャット削除処理
-    public function destroy($id)
+    public function destroy($messageId)
     {
-        Message::where('purchase_id', $id)
-        ->where('user_id', auth()->id())
-        ->latest()
+        Message::where('id', $messageId)
         ->first()
         ->delete();
 

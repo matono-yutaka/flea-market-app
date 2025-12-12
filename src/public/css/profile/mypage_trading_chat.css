@@ -5,10 +5,11 @@
 }
 
 .left-contents {
-    flex: 0 0 250px; /* ← サイドは px で固定した方が安全 */
+    flex: 0 1 250px; /* ← サイドは px で固定した方が安全 */
     background-color: rgb(128, 128, 128);
     display: block;
     height: 105vh;
+    justify-items: center;
 }
 
 .right-contents {
@@ -58,14 +59,14 @@
     margin-bottom: 50px;
 }
 
-.trading-item {
+.trading-items {
     font-size: 20px;
     text-align: center;
     text-decoration: none;
     display: block;
     border: 1px solid #d5d5d5;
     color: black;
-    margin: 40px 20px;
+    width: 80%;
     border-radius: 4px;
     background-color: #d5d5d5;
     padding: 5px;
@@ -114,6 +115,21 @@
     margin-left: 30px;
     object-fit: cover; /* ← これが重要 */
     border: 1px solid rgb(194, 194, 194);
+}
+
+.chat-image2 {
+    width: 60px;
+    height: 60px;
+    background-color: #d5d5d5;
+    border-radius: 10px;
+    margin-left: 30px;
+    object-fit: cover; /* ← これが重要 */
+    border: 1px solid rgb(194, 194, 194);
+}
+
+.chat-edit-form {
+    display: flex;
+    align-items: center;
 }
 
 .chat-name {
@@ -225,6 +241,7 @@
     margin-left: 20px;
     margin-bottom: 0;
     margin-top: 0;
+    white-space: nowrap;
 }
 
 .chat-area {

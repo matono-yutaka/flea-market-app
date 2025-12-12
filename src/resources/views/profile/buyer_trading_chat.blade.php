@@ -24,7 +24,7 @@ use Illuminate\Support\Str;
         <p class="other-trading">その他の取引</p>
         @foreach($purchases as $purchaseItem)
             @if ($purchaseItem->id !== $purchase->id)
-                <a class="trading-item" href="{{ url('/chat/' . $purchaseItem->id) }}">{{$purchaseItem->item->name}}</a>
+                <a class="trading-items" href="{{ url('/chat/' . $purchaseItem->id) }}">{{$purchaseItem->item->name}}</a>
             @endif
         @endforeach
     </div>
@@ -73,17 +73,16 @@ use Illuminate\Support\Str;
                     <div class="chat-comment2">
 
     {{-- 編集フォーム --}}
-    <form class="chat-edit-form" action="{{ url('/chat/' .$purchase->id . '/edit') }}" method="POST" id="edit-form-{{ $message->id }}" >
+    <form class="chat-edit-form" action="{{ url('/chat/edit/' .$message->id) }}" method="POST" id="edit-form-{{ $message->id }}" >
         @csrf
         @if ($message->image)
-        <img src="{{ asset('storage/' . $message->image) }}" class="chat-image">
+        <img src="{{ asset('storage/' . $message->image) }}" class="chat-image2">
         @endif
 
         <input type="text" class="chat-comment2-input" name="comment" value="{{ old('comment', $message->comment) }}" placeholder="{{$message->comment}}">
     </form>
 
     {{-- ボタン並べる用の div --}}
-    @if($message->id === $messages->last()->id)
     <div class="chat-btn-group">
 
         {{-- 編集ボタンは編集フォームを submit --}}
@@ -94,13 +93,12 @@ use Illuminate\Support\Str;
         </button>
 
         {{-- 削除フォーム --}}
-        <form action="/chat/{{$purchase->id}}/delete" method="POST" onsubmit="return confirm('本当に削除しますか？')">
+        <form action="/chat/delete/{{$message->id}}" method="POST" onsubmit="return confirm('本当に削除しますか？')">
             @csrf
             @method('DELETE')
             <input class="chat-btn" type="submit" value="削除">
         </form>
     </div>
-    @endif
                     </div>
                 </div>
                 @endif
